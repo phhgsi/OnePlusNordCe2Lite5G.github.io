@@ -1,0 +1,115 @@
+/* Global styles */
+body {
+    background: linear-gradient(to bottom, #FAD02E, #FFFFF0); /* Light Cream background color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar styles */
+header {
+    padding: 5 px 0;
+    text-align: center;
+    background-color: #F6F0BC; /* Dark background for navbar */
+    color: #FF4500; /* White text for navbar */
+    animation: fadeInDown 1s ease; /* Add fadeInDown animation */
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInLeft 1s ease; /* Add fadeInLeft animation */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo img {
+    width: 100px; /* Adjust the logo size */
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #FF4500;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add color transition on hover */
+}
+
+/* Boxes section styles */
+.boxes {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between boxes */
+    padding: 60px;
+}
+
+.box {
+    flex: 1; /* Expand to take equal space */
+    background-color: #FDF5E6;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Animation for boxes */
+    margin-right: 20px; /* Add space between boxes */
+    max-height: 300px; /* Set a maximum height for the boxes */
+    overflow: hidden;
+    position: relative;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Footer styles */
+.footer {
+    background-color: #FF4500; /* OnePlus red color */
+    text-align: left;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out; /* Animation for footer links */
+}
+
+.footer a:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Telegram logo style */
+.telegram-link {
+    margin-left: auto; /* Push Telegram logo to the right */
+}

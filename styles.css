@@ -1,0 +1,182 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+}
+
+/* General styles for mobile and desktop */
+body {
+    background-color: #FDF5E6; /* Cream color */
+    color: #333;
+}
+
+/* Style the header and navigation bar */
+header {
+    padding: 5 px 0;
+    text-align: center;
+    background-color: #F6F0BC; /* Dark background for navbar */
+    color: #C24641; /* White text for navbar */
+    animation: fadeInDown 1s ease; /* Add fadeInDown animation */
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: fadeInLeft 1s ease; /* Add fadeInLeft animation */
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.logo img {
+    width: 100px; /* Adjust the logo size */
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: #C24641;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Add color transition on hover */
+}
+
+/* Style the main content area */
+main {
+    display: flex;
+    flex-direction: column; /* Stack content on mobile */
+    align-items: center; /* Center content horizontally */
+    padding: 20px;
+}
+
+.left-content, .right-content {
+    width: 100%;
+    text-align: center; /* Center content text on mobile */
+    margin-bottom: 20px;
+}
+
+.left-content h1, .right-content h1 {
+    font-size: 24px; /* Increase font size for headings */
+}
+
+.left-content p, .right-content p {
+    font-size: 18px; /* Increase font size for paragraphs */
+}
+
+.left-content .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF4500; /* Orange button color */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Add button hover effect */
+}
+
+.left-content .download-button:hover {
+    background-color: #FF6347; /* Lighter orange on hover */
+}
+
+.right-content img {
+    width: 100%; /* Ensure the image fits the container */
+    animation: fadeInRight 1s ease; /* Add fadeInRight animation */
+    transform: scale(1); /* Initial scale for animation */
+    transform-origin: center center; /* Set the transform origin */
+}
+
+#phoneImage.animated {
+    animation: bounce 1s ease infinite; /* Add bounce animation when clicked */
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1);
+    }
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #FF4500; /* Dark background for footer */
+    color: #fff; /* White text for footer */
+    animation: fadeInUp 1s ease; /* Add fadeInUp animation */
+}
+
+.attribution p {
+    font-weight: bold;
+}
+
+/* Style and position the social icons */
+.social-icons {
+    margin-top: 20px; /* Add spacing above social icons */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Add spacing between social icons */
+}
+
+.social-icons img {
+    width: 30px; /* Adjust the size of social icons */
+    transition: transform 0.3s ease; /* Add a transform effect on hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 768px) {
+    main {
+        flex-direction: row; /* Arrange content side by side on larger screens */
+        justify-content: space-between; /* Add space between content */
+    }
+
+    .left-content, .right-content {
+        width: 48%; /* Adjust content width for desktop */
+    }
+}
